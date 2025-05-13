@@ -399,9 +399,65 @@
 
     <div class="container">
 
-        <h2> Rate us! </h2>
-        
+        <h2> Rate Us! </h2>
+
+        <br>
+
+        <b> What did you think of us? </b>
+        <textarea class="form-control" rows="5" id="verbal" placeholder="Type your verbal ratings and comments here!"></textarea>
+
+        <br>
+
+        <b> Would you employ our services in the future? </b>
+
+        <br>
+
+        <label class="form-check-label"> <input type="checkbox" class="form-check-input" value=""> Yes </label>
+
+        <br>
+
+        <label class="form-check-label"> <input type="checkbox" class="form-check-input" value=""> No </label>
+
+        <br> <br>
+
+        <b> Rate us and our website from 1-10! </b>
+        <input type="number" placeholder="Input your overall rating here!" id="numerical">
+
+        <br> <br>
+
+        <button type="button" class="btn btn-warning" onclick="overallrating()"> Send your Rating </button>
+
     </div>
+
+    <script>  
+
+        function overallrating() {
+
+            var numericalvalue = document.getElementById("numerical").value;
+
+            switch (true) {
+
+                case (numericalvalue < 5):
+                window.alert("Your rating is" + " " + numericalvalue + ", which leaves room for lots of improvement. Thank you for your input!");
+                break; 
+
+                case (numericalvalue >= 5 && numericalvalue < 8):
+                window.alert("Your rating is" + " " + numericalvalue + ", which is relatively good. Thank you for your input!");
+                break;
+
+                case (numericalvalue >= 8 && numericalvalue <= 10):
+                window.alert("Your rating is" + " " + numericalvalue + ", which is amazing. Thank you for your input!");
+                break;
+
+                default:
+                window.alert("Kindly type a number between 1 and 10.");
+                break;
+
+            }
+
+        }
+
+    </script>
     
 </body>
 
